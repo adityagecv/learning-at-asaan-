@@ -1,12 +1,16 @@
 function firstNFibonacciNumbers(n) {
+    let arr=[];
     let firstTerm = 0, secondTerm = 1, nextTerm = 0;
-    for (let i = 1; i <= n; i++) {
-        console.log(firstTerm);
+    for (let i = 0; i < n; i++) {
+        // console.log(firstTerm);
+         arr.push(firstTerm);
         nextTerm = firstTerm + secondTerm;
         firstTerm = secondTerm;
         secondTerm = nextTerm;
     }
+    return arr;
 
 
 }
-firstNFibonacciNumbers(process.argv[2]); 
+let result=firstNFibonacciNumbers(process.argv[2]); 
+console.log(result);
